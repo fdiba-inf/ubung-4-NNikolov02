@@ -7,15 +7,17 @@ public class MinIndex  {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double number = - 9999;
+        int number = 0;
+        double min = 12345;
         //System.out.println("Enter the sizee of array:");
         int size = input.nextInt();
         double [] array = new double[size];
         //System.out.println("Enter number:");
         for(int index = 0;index < size;index++){
           array[index] = input.nextInt();
-          if (array[index] < number) {
-            array[index] = number;
+          if (min > array[index]) {
+            min = array[index];
+            number = index;
           
           }
         }
